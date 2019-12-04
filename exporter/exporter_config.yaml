@@ -1,0 +1,19 @@
+--- 
+env:
+  - 
+    dev:  https://reqres.in
+    prod: http://dummy.restapiexample.com
+url: 
+  - 
+    name: data_service
+    URL: /api/v1/employee/1
+    data_validation: employee_name
+    applicable_env:
+      - prod
+  - 
+    name: data_service1
+    URL: /api/users/2
+    data_validation: first_name
+    applicable_env:
+      - dev
+
