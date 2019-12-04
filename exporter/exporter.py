@@ -25,7 +25,7 @@ def service_status():
                 for env in url.get('applicable_env'):
                     final_url = file.get('env')[0].get(env) + end_point
                     resp = requests.get(final_url)
-                    if resp.content.decode("utf-8") == data:
+                    if data in resp.content.decode("utf-8"):
                         global response_to_be_sent
                         response_to_be_sent = response_to_be_sent + 'service_status{name="' + name + '"env="' + env + \
                                               '", url="' + final_url + '"} 1\n'
